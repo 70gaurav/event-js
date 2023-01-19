@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <h1>Hover me</h1>
+            <img src="photo-1556195332-95503f664ced.jpg" alt="">
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam perspiciatis quisquam laboriosam corporis porro ex incidunt, sapiente facere quis expedita optio architecto necessitatibus saepe adipisci esse, et cupiditate minus.</P>
+            <a href="">show</a>
+        </div>
+        <div class="box">
+            <h1>Hover me</h1>
+            <img src="avatars-000618338091-cjzye6-t500x500.jpg" alt="">
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam perspiciatis quisquam laboriosam corporis porro ex incidunt, sapiente facere quis expedita optio architecto necessitatibus saepe adipisci esse, et cupiditate minus.</P>
+            <a href="">show</a>
+        </div>
+        <div class="box">
+            <h1>Hover me</h1>
+            <img src="depositphotos_82284536-Magician-hand-with-magic-wand.jpg.crdownload" alt="">
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam perspiciatis quisquam laboriosam corporis porro ex incidunt, sapiente facere quis expedita optio architecto necessitatibus saepe adipisci esse, et cupiditate minus.</P>
+            <a href="">show</a>
+        </div>
+        <div class="box">
+            <h1>Hover me</h1>
+            <img src="images.jpg" alt="">
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quam perspiciatis quisquam laboriosam corporis porro ex incidunt, sapiente facere quis expedita optio architecto necessitatibus saepe adipisci esse, et cupiditate minus.</P>
+            <a href="">show</a>
+    </div>
+    
+
+
+
+
+    <script>
+        let head = document.querySelectorAll('.box h1')
+        for(let i=0;i<head.length;i++){
+            head[i].onmouseover = () =>{
+                let balak = head[i].parentElement.children
+                for(let j=0;j<balak.length;j++){
+                    if(j<balak.length-1){
+                        balak[j].style.display='none'
+                    }
+                    else{
+                        balak[j].style.display='block'
+                    }
+                }
+
+        }
+        }
+        let show = document.querySelectorAll('a')
+        for(let i=0;i<show.length;i++){
+            show[i].onmouseover = (e) =>{
+                e.preventDefault()
+                let balak = show[i].parentElement.children
+                for(let j=0;j<show.length;j++){
+                    if(j<balak.length-1){
+                        balak[j].style.display='block'
+                    }
+                    else{
+                        balak[j].style.display='none'
+                    }
+                }
+
+        }
+        }
+            
+    </script>
+</body>
+</html>
